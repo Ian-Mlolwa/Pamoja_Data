@@ -72,10 +72,7 @@
             //performing insert into customer_data
             $sql = "INSERT INTO customer_data VALUES ('$customer_name','$apartment_name','$street',
                 '$city','$email','$phone','$medium','$package','$amount','$technician_name','$date','$serial_number')";
-            if ($con -> query($sql) === TRUE) {
-                echo "<h3> Customer data submitted sucessfully.</h3>";
-                
-            }
+           
             
             
             //performing insert into installation data
@@ -104,6 +101,7 @@
                     <th>Medium</th>
                     <th>Package</th>
                     <th>Serial Number</th>
+                    <th>Action</th>
                 </tr>
                 <tr>
                     <td><?= $_POST['customer_name']; ?></td>
@@ -115,7 +113,7 @@
                     <td><?= $_POST['package']; ?></td>
                     <td><?= $_POST['serial_number']; ?></td>
                     <td>
-                        <input id="edit" type="button" value="EDIT" onclick="history.back()">
+                        <input id="edit" value="EDIT" onclick="history.back()">
                     </td>
                 </tr>
             </table>            
